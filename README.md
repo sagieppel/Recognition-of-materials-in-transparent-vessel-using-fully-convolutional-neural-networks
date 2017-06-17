@@ -1,10 +1,11 @@
 # Recognition of materials in transparent vessel using fully convolutional neural network (FCN)
  
 Neural nets for the purpose of recognition and segmentation of materials in transparent vessels, with emphasis on chemistry glassware. This task include labeling of each pixel in the image according to several level of classes shown in the image:
-Vessel regions and background regions. 
-Filled vessel regions and empty vessel regions.
-Liquid phase and solid phase regions.
-Exact phase pixelwise classification (Solid,Liquid,Powder,Suspension,Foam…)
+1) Vessel regions and background regions. 
+2) Filled vessel regions and empty vessel regions.
+3) Liquid phase and solid phase regions.
+4) Exact phase pixelwise classification (Solid,Liquid,Powder,Suspension,Foam…)
+
 Dataset of annotated images of materials in glass vessels and their pixelwise semantic segmentation,  is supplied to support this task and can be download from: [here](https://drive.google.com/file/d/0B6njwynsu2hXelJJOFdqRjhGWWM/view?usp=sharing)
 ![](/Image.png)
 
