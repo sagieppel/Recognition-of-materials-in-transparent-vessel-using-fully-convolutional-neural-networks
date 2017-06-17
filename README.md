@@ -12,9 +12,13 @@ Dataset of annotated images of materials in glass vessels and their pixelwise se
 ## Details input/output
 The fully convolutional neural network receive an image with material in a vessel and perform semantic segmentation of the image, such that that each pixel the in the image is assigned several labels. The network performed the pixelwise labeling in several level of class granularity and return for each level an image where the value of each pixel is the phase/material/object of this pixel in the image. All the predictions are generated simultaneously in one iteration of the net.
 The output segmentation maps/images are as following (See image): 
+
 a) Vessel/Background: For each pixel assign value of 1 if it in the vessel and 0 otherwise.
+
 b) Filled/Empty: similar to above but also distinguish between filled and empty region of the vessel. For each pixel assign one of the 3 values: 0) Background, 1) Empty vessel. 2) Filled vessel
+
 c) Phase type: Similar to above but distinguish between liquid and solid regions of the filled vessel.   For each pixel assign one of the 4 values: 0) Background, 1) Empty vessel. 2) Liquid. 3) Solid.
+
 d)Fine grain phase type: Similar to above but distinguish between fine  grain specific phases regions of the filled vessel. For each pixel assign one of 15 values: 1) BackGround. 2) Vessel. 3) Liquid. 4) Liquid Phase two. 5) Suspension. 6) Emulsion. 7) Foam. 8) Solid. 9) Gel. 10) Powder. 11) Granular. 12) Bulk. 13) Bulk Liquid. 14) Solid Phase two. 15) Vapor.
  
  
