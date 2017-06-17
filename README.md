@@ -29,7 +29,7 @@ The training was done using Nvidia GTX 1080, on Linux Ubuntu 16.04.
 5) If you not interested in training the net then download a pretrained model and extract to /log folder in the main code dir. The pretrained model could be download from: [here](https://drive.google.com/file/d/0B6njwynsu2hXMjdLcjNfb2tNSUE/view?usp=sharing) 
 
 ## Tutorial
-### Predicting pixel wise labels: 
+### Predicting: pixelwise classification and segmentation of images 
 Run: Inference.py    
 Notes: Make sure Image_dir variable a point to a valid image folders, and /log folder contain a trained net.
 
