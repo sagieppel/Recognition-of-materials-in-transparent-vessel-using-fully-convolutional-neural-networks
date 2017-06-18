@@ -36,18 +36,18 @@ The training was done using Nvidia GTX 1080, on Linux Ubuntu 16.04.
 ## Tutorial
 ### Predicting: pixelwise classification and segmentation of images 
 Run: Inference.py    
-Notes: Make sure Image_dir variable a point to a valid image folders, and /log folder contain a trained net.
+Notes: Make sure that the Image_dir variable is pointing to a valid image folders, and that the /log folder contain a trained net.
 
 ### Training network:
  Run:  Train.py 
  
- Note: Make sure you downloaded the dataset to /Data_Zoo folder
+ Note: Make sure the /Data_Zoo folder contain the downloaded dataset
 
 ### Evaluating net performance using intersection over union (IOU):
  
 Run: Evaluate_Net_IOU.py
  
-Notes:  Make sure you downloaded the dataset to /Data_Zoo and the /log folder contain a trained net.
+Notes:  Make sure you downloaded the dataset to /Data_Zoo and that the /log folder contain a trained net.
  
 ## Background 
 The net is based on fully convolutional neural net described in the paper [Fully Convolutional Networks for Semantic Segmentation](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf)
