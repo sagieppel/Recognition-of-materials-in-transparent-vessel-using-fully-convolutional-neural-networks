@@ -51,8 +51,7 @@ Notes:  Make sure you downloaded the dataset to /Data_Zoo and that the /log fold
  
 ## Background 
 The net is based on fully convolutional neural net described in the paper [Fully Convolutional Networks for Semantic Segmentation](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf)
-The main modification is that the last prediction layer is split to give prediction in several level of granularity for each pixel. Similarly training of the network was done with several loss function simultaneously one for each set of classes. See BuildNetVgg16.py for the network structure.
- 
+The main modification is that the last prediction layer is split to give prediction in several level of granularity for each pixel. Similarly training of the network was done with several loss function simultaneously one for each set of classes. See BuildNetVgg16.py for the network structure. The code is based on https://github.com/shekkizh/FCN.tensorflow by Sarath Shekkizhar with MIT licence.
 The net is based on the pretrained VGG16 model by [Marvin Teichmann](https://github.com/MarvinTeichmann)
 
 
