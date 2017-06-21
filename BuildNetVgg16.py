@@ -27,7 +27,7 @@ class BUILD_NET_VGG16:
 
         :param rgb: rgb image [batch, height, width, 3] values 0-255
         """
-        self.SumWeights = tf.Variable(0.0, name="SumFiltersWeights") #Sum of weights of all filters for weight decay loss
+        self.SumWeights = tf.constant(0.0, name="SumFiltersWeights") #Sum of weights of all filters for weight decay loss
 
 
         print("build model started")
