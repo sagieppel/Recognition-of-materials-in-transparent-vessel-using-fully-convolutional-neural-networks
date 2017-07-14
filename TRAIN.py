@@ -8,7 +8,7 @@ import Data_Reader
 import BuildNetVgg16
 import TensorflowUtils
 import os
-Train_Image_Dir="Data_Zoo/Materials_In_Vessels/Train_Images/" # Images  for training
+Train_Image_Dir="Data_Zoo/Materials_In_Vessels/Train_Images" # Images and labels for training
 if not os.path.exists("Data_Zoo/"): os.makedirs("Data_Zoo/")
 Label_Dir="Data_Zoo/Materials_In_Vessels/"# Annotetion for train images and validation images (assume the name of the images and annotation images are the same)
 Valid_Image_Dir="Data_Zoo/Materials_In_Vessels/Validation_Images"# Validation images that will be used to evaluate training
@@ -43,7 +43,7 @@ Batch_Size=2 # Number of files per training iteration
 
 
 Weight_Loss_Rate=5e-4# Weight for the weight decay loss function
-MAX_ITERATION = int(110010) # Max  number of training iteration
+MAX_ITERATION = int(100010) # Max  number of training iteration
 NUM_CLASSES = 15+2+3+4#Number of class for fine grain +number of class for solid liquid+Number of class for empty none empty +Number of class for vessel background
 ######################################Solver for model   training#####################################################################################################################
 def train(loss_val, var_list):
@@ -104,7 +104,7 @@ def main(argv=None):
         feed_dict = {image: Images,VesselLabel:LabelsVessel, PhaseLabel: LabelsOnePhase,LiquidSolidLabel:LabelsSolidLiquid,AllPhasesLabel:LabelsAllPhases, keep_prob: 0.5}
         sess.run(train_op, feed_dict=feed_dict) # Train one cycle
 # --------------Save trained model------------------------------------------------------------------------------------------------------------------------------------------
-        if itr % 1000 == 0: saver.save(sess, logs_dir + "model.ckpt", itr)
+        if itr % 20000 == 0: saver.save(sess, logs_dir + "model.ckpt", itr)
 #......................Write and display train loss..........................................................................
         if itr % 10==0:
             # Calculate train loss

@@ -15,9 +15,9 @@ class Data_Reader:
         self.Image_Dir=ImageDir
         # Directory  for labels of various annotations modes
         self.Phase_Label_Dir = LabelDir+"/OnePhaseLabels/"
-        self.LiquidSolid_Label_Dir = LabelDir+"/LiquidSolid/"
+        self.LiquidSolid_Label_Dir = LabelDir+"/LiquidSolidLabels/"
         self.AllPhases_Label_Dir =  LabelDir+"/AllPhasesLabels/"
-        self.Vessel_Label_Dir = LabelDir+"/VeselLabels/"
+        self.Vessel_Label_Dir = LabelDir+"/VesselLabels/"
         self.Phase_Label_Dir =  LabelDir+"/OnePhaseLabels/"
         self.LiquidSolid_Label_Dir =  LabelDir+"/LiquidSolidLabels/"
         self.AllPhases_Label_Dir =  LabelDir+"/AllPhasesLabels/"
@@ -59,9 +59,9 @@ class Data_Reader:
             else:
                 YF*=0.5+np.random.rand()*0.5
 #-----------Crop Image------------------------------------------------------
-        if np.random.rand()<0.8:
-            Cry=0.40+np.random.rand()*0.60
-            Crx = 0.40 + np.random.rand() * 0.60
+        if np.random.rand()<0.7:
+            Cry=0.50+np.random.rand()*0.50
+            Crx = 0.50 + np.random.rand() * 0.50
 
 #-----------Augument Images and labeles-------------------------------------------------------------------
         Images = []
@@ -125,13 +125,19 @@ class Data_Reader:
                LBAllPhases=np.fliplr(LBAllPhases)
 #-----------------------Agument color of Image-----------------------------------------------------------------------
            Img = np.float32(Img)
+
+
+           if np.random.rand() < 0.8:  # Play with shade
+               Img *= 0.4 + np.random.rand() * 0.6
+           if np.random.rand() < 0.4:  # Turn to grey
+               Img[:, :, 2] = Img[:, :, 1]=Img[:, :, 0] = Img[:,:,0]=Img.mean(axis=2)
+
            if np.random.rand() < 0.0:  # Play with color
               if np.random.rand() < 0.6:
                  for i in range(3):
                      Img[:, :, i] *= 0.1 + np.random.rand()
 
-              if np.random.rand() < 0.8:  # Play with shade
-                   Img *= 0.3 + np.random.rand()
+
 
               if np.random.rand() < 0.2:  # Add Noise
                    Img *=np.ones(Img.shape)*0.95 + np.random.rand(Img.shape[0],Img.shape[1],Img.shape[2])*0.1
