@@ -1,4 +1,4 @@
-# Recognition of material phases in transparent vessel using fully convolutional neural network (FCN) in chemistry labratory setting
+# Recognition of materials in glassware vessels using fully convolutional neural network (FCN) in chemistry labratory setting
  
 Using fully Convolutional Neural nets for the purpose of recognition and segmentation of materials in transparent vessels, with emphasis on chemistry labratory glassware. This task include labeling of each pixel in the image according to several level of classes shown in the image:
 1) Vessel regions and background regions. 
