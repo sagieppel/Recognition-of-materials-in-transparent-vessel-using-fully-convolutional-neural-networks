@@ -15,7 +15,7 @@ The output segmentation maps/images are as following (See image):
 
 a. Vessel/Background: For each pixel assign value of 1 if it in the vessel and 0 otherwise.
 
-b. Filled/Empty: similar to above but also distinguish between filled and empty region of the vessel. For each pixel assign one of the 3 values: 0) Background, 1) Empty vessel. 2) Filled vessel
+b. Filled/Empty: similar to above but also distinguish between filled and empty region of the vessel. For each pixel assign one of the 3 values: 0) Background, 1) Empty vessel. 2) Filled vessel 
 
 c. Phase type: Similar to above but distinguish between liquid and solid regions of the filled vessel.   For each pixel assign one of the 4 values: 0) Background, 1) Empty vessel. 2) Liquid. 3) Solid.
 
