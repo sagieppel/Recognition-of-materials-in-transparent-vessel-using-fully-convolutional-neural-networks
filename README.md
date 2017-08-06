@@ -10,7 +10,7 @@ Dataset of annotated images of materials in glass vessels and their pixelwise se
 ![](/Image.png)
 
 ## Details input/output
-The fully convolutional neural network receive an image with material in a vessel and perform semantic segmentation of the image, such that that each pixel the in the image is assigned several labels. The network performed the pixelwise labeling in several level of class granularity and return for each level an image where the value of each pixel is the phase/material/object of this pixel in the image. All the predictions are generated simultaneously in one iteration of the net.
+The fully convolutional neural network receive an image with material in a glassware vessel and perform semantic segmentation of the image, such that that each pixel the in the image is assigned several labels. The network performed the pixelwise labeling in several level of class granularity and return for each level an image where the value of each pixel is the phase/material/object of this pixel in the image. All the predictions are generated simultaneously in one iteration of the net.
 The output segmentation maps/images are as following (See image): 
 
 a. Vessel/Background: For each pixel assign value of 1 if it in the vessel and 0 otherwise.
