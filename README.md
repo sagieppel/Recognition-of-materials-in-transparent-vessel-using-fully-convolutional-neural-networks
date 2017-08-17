@@ -1,4 +1,4 @@
-### Using fully Convolutional Neural nets for recognition and segmentation of materials in transparent vessels, with emphasis on chemistry lab settings. 
+# Using fully Convolutional Neural nets for recognition and segmentation of materials in transparent vessels, with emphasis on chemistry lab settings. 
 This task includes labeling of each pixel in the image according to several levels of classes shown in the image:
 1) Vessel regions and background regions. 
 2) Filled vessel regions and empty vessel regions.
@@ -58,7 +58,7 @@ The main modification is that the last prediction layer is split to give a predi
 The net is based on the pre-trained VGG16 model by [Marvin Teichmann](https://github.com/MarvinTeichmann)
 
 
-# Thanks
+#### Thanks
 I would like to thank Alexandra Emanuel and  Mor Bismuth for their work on labeling of the dataset. I also like to thank the creators of the Youtube channels NileRed, NurdeRage and ChemPlayer for allowing the use of frames from their videos for creating this dataset. 
 
 ## Links
