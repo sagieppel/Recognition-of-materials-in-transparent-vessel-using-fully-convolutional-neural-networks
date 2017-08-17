@@ -1,4 +1,4 @@
-Using fully Convolutional Neural nets for recognition and segmentation of materials in transparent vessels, with emphasis on chemistry lab glassware. This task includes labeling of each pixel in the image according to several levels of classes shown in the image:
+### Using fully Convolutional Neural nets for recognition and segmentation of materials in transparent vessels, with emphasis on chemistry lab glassware. This task includes labeling of each pixel in the image according to several levels of classes shown in the image:
 1) Vessel regions and background regions. 
 2) Filled vessel regions and empty vessel regions.
 3) Liquid phase and solid phase regions.
