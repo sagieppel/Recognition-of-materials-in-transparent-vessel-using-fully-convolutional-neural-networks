@@ -1,26 +1,26 @@
-# Recognition of materials in glassware vessels using fully convolutional neural network (FCN) in chemistry lab setting
- 
-Using fully Convolutional Neural nets for the purpose of recognition and segmentation of materials in transparent vessels, with emphasis on chemistry lab glassware. This task include labeling of each pixel in the image according to several level of classes shown in the image:
+Using fully Convolutional Neural nets for recognition and segmentation of materials in transparent vessels, with emphasis on chemistry lab glassware. This task includes labeling of each pixel in the image according to several levels of classes shown in the image:
 1) Vessel regions and background regions. 
 2) Filled vessel regions and empty vessel regions.
 3) Liquid phase and solid phase regions.
-4) Exact phase pixelwise classification (Solid,Liquid,Powder,Suspension,Foam…)
+4) Exact phase pixel-wise classification (Solid, Liquid, Powder, Suspension, Foam…)
 
-Dataset of annotated images of materials in glass vessels and their pixelwise semantic segmentation,  is supplied to support this task and can be download from: [here](https://drive.google.com/file/d/0B6njwynsu2hXRFpmY1pOV1A4SFE/view?usp=sharing)
+Dataset of annotated images of materials in glass vessels and their pixel-wise semantic segmentation  is supplied to support this task and can be download from: [here](https://drive.google.com/file/d/0B6njwynsu2hXRFpmY1pOV1A4SFE/view?usp=sharing)
 ![](/Figure1.png)
 
 
 ## Details input/output
-The fully convolutional neural network receive an image with material in a glassware vessel and perform semantic segmentation of the image, such that that each pixel the in the image is assigned several labels. The network performed the pixelwise labeling in several level of class granularity and return for each level an image where the value of each pixel is the phase/material/object of this pixel in the image. All the predictions are generated simultaneously in one iteration of the net.
+convolutional neural network (FCN) in chemistry lab setting
+ 
+The fully convolutional neural network receives an image with materials in a glass vessel and performs semantic segmentation of the image, such that each pixel the in the image is assigned several labels. The network performed the pixel-wise labeling in several levels of class granularity and return for each level an image where the value of each pixel is the phase/material/object of this pixel in the image. All the predictions are generated simultaneously in one iteration of the net.
 The output segmentation maps/images are as following (See image): 
 
-a. Vessel/Background: For each pixel assign value of 1 if it in the vessel and 0 otherwise.
+a. Vessel/Background: For each pixel assign the value of 1 if it in the vessel and 0 otherwise.
 
-b. Filled/Empty: similar to above but also distinguish between filled and empty region of the vessel. For each pixel assign one of the 3 values: 0) Background, 1) Empty vessel. 2) Filled vessel 
+b. Filled/Empty: similar to above but also distinguish between the filled and empty region of the vessel. For each pixel assign, one of the three values: 0) Background, 1) Empty vessel. 2) Filled vessel 
 
-c. Phase type: Similar to above but distinguish between liquid and solid regions of the filled vessel.   For each pixel assign one of the 4 values: 0) Background, 1) Empty vessel. 2) Liquid. 3) Solid.
+c. Phase type: Similar to above but distinguish between liquid and solid regions of the filled vessel.   For each pixel assign, one of the four values: 0) Background, 1) Empty vessel. 2) Liquid. 3) Solid.
 
-d. Fine grain phase type: Similar to above but distinguish between fine  grain specific phases regions of the filled vessel. For each pixel assign one of 15 values: 1) BackGround. 2) Vessel. 3) Liquid. 4) Liquid Phase two. 5) Suspension. 6) Emulsion. 7) Foam. 8) Solid. 9) Gel. 10) Powder. 11) Granular. 12) Bulk. 13) Bulk Liquid. 14) Solid Phase two. 15) Vapor.
+d. Fine grain phase type: Similar to above but distinguish between fine grain specific phases regions of the filled vessel. For each pixel assign one of 15 values: 1) background. 2) Vessel. 3) Liquid. 4) Liquid Phase two. 5) Suspension. 6) Emulsion. 7) Foam. 8) Solid. 9) Gel. 10) Powder. 11) Granular. 12) Bulk. 13) Bulk Liquid. 14) Solid Phase two. 15) Vapor.
 
 ![](/Figure2.jpg) 
  
@@ -52,9 +52,9 @@ Run: Evaluate_Net_IOU.py
 Notes:  Make sure you downloaded the dataset to /Data_Zoo and that the /log folder contain a trained net.
  
 ## Background 
-The net is based on fully convolutional neural net described in the paper [Fully Convolutional Networks for Semantic Segmentation](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf)
-The main modification is that the last prediction layer is split to give prediction in several level of granularity for each pixel. Similarly training of the network was done with several loss function simultaneously one for each set of classes. See BuildNetVgg16.py for the network structure. The code is based on https://github.com/shekkizh/FCN.tensorflow by Sarath Shekkizhar with MIT licence.
-The net is based on the pretrained VGG16 model by [Marvin Teichmann](https://github.com/MarvinTeichmann)
+The code is based on fully convolutional neural net (FCN) described in the paper [Fully Convolutional Networks for Semantic Segmentation](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf)
+The main modification is that the last prediction layer is split to give a prediction at several levels of granularity for each pixel. Similarly, training of the network was done with several loss functions simultaneously one for each set of classes. See BuildNetVgg16.py for the network structure. The code is based on https://github.com/shekkizh/FCN.tensorflow by Sarath Shekkizhar with MIT license.
+The net is based on the pre-trained VGG16 model by [Marvin Teichmann](https://github.com/MarvinTeichmann)
 
 
 ## Thanks
