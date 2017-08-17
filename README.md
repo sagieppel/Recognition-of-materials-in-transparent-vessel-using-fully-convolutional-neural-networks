@@ -21,7 +21,8 @@ b. Filled/Empty: similar to above but also distinguish between filled and empty 
 c. Phase type: Similar to above but distinguish between liquid and solid regions of the filled vessel.   For each pixel assign one of the 4 values: 0) Background, 1) Empty vessel. 2) Liquid. 3) Solid.
 
 d. Fine grain phase type: Similar to above but distinguish between fine  grain specific phases regions of the filled vessel. For each pixel assign one of 15 values: 1) BackGround. 2) Vessel. 3) Liquid. 4) Liquid Phase two. 5) Suspension. 6) Emulsion. 7) Foam. 8) Solid. 9) Gel. 10) Powder. 11) Granular. 12) Bulk. 13) Bulk Liquid. 14) Solid Phase two. 15) Vapor.
-![](/Figure2.png) 
+
+![](/Figure2.jpg) 
  
 ## Requirements
 This network was run and trained with [Python 3.6 Anaconda](https://www.continuum.io/downloads) package and [Tensorflow 1.1](https://www.tensorflow.org/install/).
