@@ -59,7 +59,7 @@ The net is based on the pre-trained VGG16 model by [Marvin Teichmann](https://gi
 
 
 #### Thanks
-I would like to thank Alexandra Emanuel and  Mor Bismuth for their work on labeling of the dataset. I also like to thank the creators of the Youtube channels NileRed, NurdeRage and ChemPlayer for allowing the use of frames from their videos for creating this dataset. 
+The images in the data set was labeled by Mor bisumuth and alexandra Emanual. Images were taken with premission from Youtube channels NileRed, NurdeRage and ChemPlayer. 
 
 ## Links
 If the vessel region is already known and used as input for the net see:
