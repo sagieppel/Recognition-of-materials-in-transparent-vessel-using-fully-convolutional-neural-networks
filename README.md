@@ -9,6 +9,7 @@ The FCN was modified labeling of each pixel in the image according to several le
 4) Exact phase pixel-wise classification (Solid, Liquid, Powder, Suspension, Foam…)
 
 [Dataset of annotated images of materials in glass vessels](https://github.com/sagieppel/Materials-in-Vessels-data-set) and their pixel-wise semantic segmentation  is supplied to support this task and can be download from: [here](https://drive.google.com/file/d/0B6njwynsu2hXRFpmY1pOV1A4SFE/view?usp=sharing)
+The code is discussed in the paper [Setting an attention region for convolutional neural networks using region selective features, for recognition of materials within glass vessels](https://arxiv.org/abs/1708.08711)
 ![](/Figure1.png)
 
 
