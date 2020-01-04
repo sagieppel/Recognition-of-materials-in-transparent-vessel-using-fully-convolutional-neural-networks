@@ -1,7 +1,7 @@
 # Using fully Convolutional Neural nets for recognition and segmentation of materials in transparent vessels, with emphasis on chemistry lab settings. 
 
 
-## Note: a newer and much better net  for the same porpuse can be found [here](https://github.com/sagieppel/Detecting-and-segmenting-and-classifying-materials-inside-vessels-in-images-using-convolutional-net)   
+## Note: a newer and much better net for the same purpose can be found [here](https://github.com/sagieppel/Detecting-and-segmenting-and-classifying-materials-inside-vessels-in-images-using-convolutional-net)   
 
 A fully convolutional neural net (FCN) that was modified to be used with the [materials in vessels data set](https://github.com/sagieppel/Materials-in-Vessels-data-set).
 
